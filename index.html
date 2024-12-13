@@ -29,8 +29,10 @@
             color: #333;
         }
 
-        a {
+        .link-button {
             display: inline-block;
+            width: 250px; /* Ajustez cette valeur pour que le texte tienne sur une seule ligne */
+            text-align: center;
             margin: 15px;
             padding: 10px 20px;
             text-decoration: none;
@@ -39,9 +41,10 @@
             background-color: #0066cc;
             border-radius: 5px;
             transition: background-color 0.3s ease;
+            white-space: nowrap; /* Empêche le retour à la ligne */
         }
 
-        a:hover {
+        .link-button:hover {
             background-color: #004080;
         }
 
@@ -57,12 +60,13 @@
     <h1>Bienvenue sur notre projet d'analyse de données</h1>
     <p>Par : Hervé Bastien, Faidy Robin, Jules Pariente, Allan Coelho, Enzo Lamaison</p>
     
-    <p><a href="./statistiques.html">Statistiques Descriptives</a></p>
-    <p><a href="./analyse.html">Analyse de Données</a></p>
+    <div>
+        <a href="./statistiques.html" class="link-button">Statistiques Descriptives</a>
+        <a href="./analyse.html" class="link-button">Analyse de Données</a>
+    </div>
 
     <footer>
         &copy; 2024 - Projet d'Analyse de Données
     </footer>
 </body>
 </html>
-
