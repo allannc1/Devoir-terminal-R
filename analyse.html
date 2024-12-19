@@ -5,38 +5,197 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Analyse de Données</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Roboto', sans-serif;
+            background: url('images/background.webp') no-repeat center center fixed; 
+            background-size: cover;
             margin: 0;
-            padding: 20px;
+            padding: 0;
         }
 
         h1 {
-            color: #003366;
+            text-align: center;
+            color: #ffffff;
+            font-size: 3em;
+            margin: 20px 0;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .card {
+            background: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            width: 90%;
+            max-width: 800px;
+            margin: 20px 0;
+            padding: 20px;
+        }
+
+        .card-title {
+            font-size: 1.8em;
+            color: #ffffff;
+            margin-bottom: 20px;
+            text-align: center;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .card-image {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .card-image img {
+            max-width: 100%;
+            max-height: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+
+        .card-content {
+            color: #ffffff;
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+            margin-top: 20px;
+        }
+
+        .card-content p, .card-content ul {
+            margin-bottom: 15px;
+        }
+
+        .card-content ul {
+            padding-left: 20px;
+        }
+
+        .card-content ul li {
+            margin-bottom: 10px;
         }
 
         a {
             display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
             text-decoration: none;
-            font-size: 1.1em;
             color: white;
-            background-color: #0066cc;
+            background-color: rgba(0, 102, 204, 0.9);
+            padding: 10px 20px;
             border-radius: 5px;
+            text-align: center;
+            margin: 20px auto;
             transition: background-color 0.3s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         a:hover {
-            background-color: #004080;
+            background-color: rgba(0, 64, 128, 0.9);
         }
+
     </style>
 </head>
 <body>
     <h1>Analyse de Données</h1>
-    <p>Contenu de la page sur l'analyse des données...</p>
+    <div class="container">
+
+        <div class="card">
+            <div class="card-title">Introduction</div>
+            <div class="card-content">
+                <p>Les analyses et statistiques présentées dans ce projet sont basées sur des échantillons de données, et non sur l'intégralité des données disponibles en France, car cela rendrait l'étude excessivement volumineuse et complexe. Les valeurs absolues des résultats sont donc réduites par rapport à la réalité mais elles reflètent fidèlement les proportions et tendances que l'on pourrait observé avec les données globales. Ainsi, nos chiffres permettent une représentation cohérente et représentative de la réalité pour chaque aspect étudiés, tout en restant dans les limites des données que l'on puisse traiter avec nos ordinateurs.</p>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Analyse 1 : Concentration des offres par département</div>
+            <div class="card-image">
+                <img src="images/A1_final.png" alt="Carte des offres d'emploi par département">
+            </div>
+            <div class="card-content">
+                <p>Cette carte montre une répartition des offres d’emploi en France par département depuis 2014. Plus les zones sont foncés plus elles représentent les départements dynamiques, où les offres d’emploi sont les plus nombreuses.</p>
+                <p><b>Observations :</b></p>
+                <ul>
+                    <li><b>Très forte concentration :</b> Les départements d’Île-de-France sont les lieux concentrant le plus d'activités et surtout Paris où le nombre d'offres d'emplois est le plus élevé, d'autres département en France proposent aussi un nombre important d'offres d'emploi tel que le Nord (59) autour de Lille, le Rhône(69) autour de Lyon, les Bouches du rhone (13) autour de marseille et la Gironde (33) autour de Bordeaux.  .</li>
+                    <li><b>Moindre activité :</b> Les départements ruraux, représentés en rose clair, affichent un nombre d’offres significativement inférieur et sont des zones où l'activité est bien plus faible et donc forcément beaucoup moins d'offres d'emplois.</li>
+                </ul>
+                <p><b>Conclusion :</b> L’attractivité économique des grandes métropoles crée une forte disparité dans la proposition des offres d’emploi à travers la France.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-title">Analyse 2 : Relation entre salaire moyen et nombre d'offres</div>
+            <div class="card-image">
+                <img src="images/A2_final.png" alt="Relation entre salaire moyen et nombre d'offres">
+            </div>
+            <div class="card-content">
+                <p>Ce graphique illustre la relation entre le salaire moyen et le nombre d’offres d’emploi.</p>
+                <p><b>Observations :</b></p>
+                <ul>
+                    <li>Les salaires les plus élevés (> 150 000 €) sont associés à un nombre très limité d’offres.</li>
+                    <li>Une grande majorité des offres se concentrent autour de salaires moyens de 30 000 € à 50 000 €.</li>
+                </ul>
+                <p><b>Conclusion :</b> Les postes les mieux rémunérés sont souvent rares et liés à des compétences ou qualifications spécifiques, tandis que la majorité des offres se situent dans une fourchette de salaires plus modeste.</p>
+            </div>
+        </div>
+
     
-    <p><a href="./index.html">Revenir à la page d'accueil</a></p>
+        <div class="card">
+            <div class="card-title">Analyse 3 : Nuage de mots des compétences recherchées</div>
+            <div class="card-image">
+                <img src="images/A3_final.png" alt="Nuage de mots des compétences recherchées">
+            </div>
+            <div class="card-content">
+                <p>Ce nuage de mots met en avant les compétences les plus recherchées par les employeurs.</p>
+                <p><b>Observations :</b></p>
+                <ul>
+                    <li>Les compétences techniques en lien avec l'informatique et les mathématiques (ex.<b>Python</b>, <b>SQL</b>, <b>Power BI</b>, <b>Statistiques</b>...) sont très demandées.</li>
+                    <li>Les soft skills comme <b>collaboration</b>, <b>autonomie</b>, et la maîtrise de l’<b>anglais</b> sont également valorisées.</li>
+                </ul>
+                <p><b>Conclusion :</b> Ce graphique offre un avantage précieux en permettant d'identifier les compétences les plus recherchées aujourd'hui en entreprise. Cette information est particulièrement utile pour les personnes en recherche de formation ou pour évaluer l'attractivité de la formation suivie. En connaissant les compétences prisées par les employeurs, il devient plus facile de s'orienter vers des choix de carrière pertinents et d'anticiper les besoins du marché du travail. Les employeurs recherchent un mélange de compétences techniques, mais aussi certaines compétences davantage basées sur l'aspect relationnel et la personnalité, qui sont très importantes en entreprise. Le fait que ces compétences soient les plus recherchées reflète des besoins dans des secteurs comme la tech et l’analyse de données, ou, du moins, l'utilisation d'outils informatiques assez spécifiques, qui semblent aujourd'hui indispensables pour les entreprises.</p>
+            </div>
+        </div>
+
+        
+        <div class="card">
+            <div class="card-title">Analyse 4 : Distribution des salaires moyens par secteur</div>
+            <div class="card-image">
+                <img src="images/A4_final.png" alt="Distribution des salaires moyens par secteur">
+            </div>
+            <div class="card-content">
+                <p>Ce graphique en boîte montre la répartition des salaires moyens dans différents secteurs.</p>
+                <p>Boxplot par secteur : Chaque secteur est représenté par un boxplot, qui montre la répartition des salaires moyens. La boîte représente la moitié des observations (du premier au troisième quartile), la ligne à l'intérieur est la médiane, et les points en dehors des "moustaches" représentent des valeurs atypiques (outliers).</p>
+                <p><b>Observations :</b></p>
+                <p><b>Secteurs les mieux rémunérés :</b></p>
+                <ul>
+                    <li><b>Agriculture et Pêche :</b> Bien que souvent perçus comme moins lucratifs, ces secteurs affichent des salaires moyens élevés, situés au-dessus de la moyenne.</li>
+                    <li><b>Banque, Assurance, Finance :</b> Ces secteurs figurent parmi les mieux rémunérés, mais montrent une grande dispersion, reflétant des écarts significatifs entre les postes et niveaux de responsabilité.</li>
+                    <li><b>BEP, CAP, Services aux particuliers :</b> Contre toute attente, ces secteurs montrent des salaires élevés pour certains postes spécialisés ou rares.</li>
+                    <li><b>Industrie high-tech et Telecom :</b> Les salaires y sont compétitifs, avec une variabilité modérée, ce qui souligne la demande croissante pour les compétences techniques dans ces domaines.</li>
+                    <li><b>Service public et Collectivités territoriales :</b> Ce secteur bénéficie de salaires stables et relativement élevés.</li>
+                </ul>
+                <p><b>Secteurs les moins bien rémunérés :</b></p>
+                <ul>
+                    <li><b>Distribution, Commerce de gros :</b> Ce secteur affiche des salaires bas en moyenne, malgré une forte dispersion dans certains cas.</li>
+                    <li><b>Industrie et Manufacture :</b> Les salaires restent en dessous de la moyenne, avec peu de variation.</li>
+                    <li><b>Services aux entreprises, Média, Internet, Communication :</b> Ces secteurs montrent des rémunérations faibles et peu de variabilité.</li>
+                </ul>
+                <p><b>Secteurs à rémunération moyenne :</b></p>
+                <ul>
+                    <li><b>Services aux entreprises :</b> Bien que ce secteur soit marqué par une grande dispersion, les salaires moyens reflètent une diversité de postes sûrement liée au statut (du junior au cadre supérieur).</li>
+                    <li><b>Industrie aérospatiale :</b> Avec des salaires compétitifs, ce secteur reste dans une moyenne haute et relativement stable.</li>
+                    <li><b>Secteur Informatique :</b> Les salaires moyens sont compétitifs, bien que des écarts importants soient visibles selon les spécialisations.</li>
+                </ul>
+                <p><b>Conclusion :</b> Ce graphique montre les différences significatives de rémunération entre les secteurs. Les secteurs technologiques, financiers, et publics se démarquent par des salaires attractifs malgré une variabilité importante. À l'inverse, des secteurs comme la manufacture et les services aux entreprises montrent des rémunérations plus modestes. La dispersion salariale observée dans certains secteurs montre qu'il existe une forte hétérogénéité des postes et des compétences ou sûrement un système hiérarchique très présent. Tout ceci donne un aperçu des opportunités et des inégalités au sein du marché de l’emploi.</p>
+            </div>
+        </div>        
+            
+    <p style="text-align: center;">
+        <a href="./index.html">Revenir à la page d'accueil</a>
+    </p>
 </body>
 </html>
+
+

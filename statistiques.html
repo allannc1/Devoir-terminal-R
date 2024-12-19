@@ -5,41 +5,274 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Statistiques Descriptives</title>
     <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f9f9f9;
+            font-family: 'Roboto', sans-serif;
+            background: url('images/background.webp') no-repeat center center fixed;
+            background-size: cover;
             margin: 0;
             padding: 20px;
         }
 
         h1 {
-            color: #003366;
+            text-align: center;
+            color: #ffffff;
+            font-size: 3em;
+            margin-top: 20px;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7);
+        }
+
+        .block {
+            margin: 20px auto;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.7); 
+            border-radius: 10px;
+            width: 90%;
+            max-width: 1100px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+            color: #ffffff; 
+            text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+        }
+
+        .block h2 {
+            color: #ffffff;
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2em;
+        }
+
+        .card {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .card-title {
+            width: 100%;
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .card-image {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 10px;
+            margin-right: 20px;
+            min-width: 500px;
+        }
+
+        .card-image img {
+            max-width: 100%;
+            max-height: 500px;
+            object-fit: contain;
+        }
+
+        .card-content {
+            flex: 2;
+            min-width: 300px;
+        }
+
+        .card-content ul {
+            list-style-type: disc;
+            margin: 0;
+            padding-left: 20px;
+        }
+
+        .interpretation {
+            margin-top: 10px;
+            margin-bottom: 40px;
+            font-size: 1.1em;
         }
 
         a {
-            display: inline-block;
-            margin-top: 20px;
-            padding: 10px 20px;
             text-decoration: none;
-            font-size: 1.1em;
             color: white;
-            background-color: #0066cc;
+            background-color: rgba(0, 102, 204, 0.9);
+            padding: 10px 20px;
             border-radius: 5px;
-            transition: background-color 0.3s ease;
+            display: block;
+            text-align: center;
+            width: 200px;
+            margin: 40px auto;
+            font-size: 1.2em;
+            font-weight: bold;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
         }
 
         a:hover {
-            background-color: #004080;
+            background-color: rgba(0, 64, 128, 0.9);
         }
     </style>
 </head>
 <body>
     <h1>Statistiques Descriptives</h1>
-    <p>Contenu de la page sur les statistiques descriptives...</p>
-    
-    <p><a href="./index.html">Revenir à la page d'accueil</a></p>
+
+    <div class="block">
+        <h2>Introduction</h2>
+        <p>Les analyses et statistiques présentées dans ce projet sont basées sur des échantillons de données, et non sur l'intégralité des données disponibles en France, car cela rendrait l'étude excessivement volumineuse et complexe. Les valeurs absolues des résultats sont donc réduites par rapport à la réalité mais elles reflètent fidèlement les proportions et tendances que l'on pourrait observé avec les données globales. Ainsi, nos chiffres permettent une représentation cohérente et représentative de la réalité pour chaque aspect étudiés, tout en restant dans les limites des données que l'on puisse traiter avec nos ordinateurs.</p>
+    </div>
+
+    <div class="block">
+        <h2>Base Brevet</h2>
+        <div class="card">
+            <div class="card-title">Statistiques descriptives pour la variable n_patents</div>
+            <div class="card-image">
+                <img src="images/S1_brevet.png" alt="Statistiques descriptives n_patents">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Minimum : 0.1 brevet</li>
+                    <li>Médiane : 1 brevet</li>
+                    <li>Maximum : 4674.6 brevets</li>
+                    <li>Moyenne : 7.192665 brevets</li>
+                    <li>Écart-type : 79.324 brevets</li>
+                </ul>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-title">Top 5 entreprises avec le plus de brevets</div>
+            <div class="card-image">
+                <img src="images/S2_brevet.png" alt="Top 5 entreprises brevets">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Commissariat à l'énergie atomique : 4675 brevets</li>
+                    <li>Alcatel Lucent : 3936 brevets</li>
+                    <li>Thomson Licensing : 2984 brevets</li>
+                    <li>Michelin : 1754 brevets</li>
+                    <li>Renault : 1698 brevets</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Top 5 descriptions IPC avec le plus de brevets</div>
+            <div class="card-image">
+                <img src="images/S3_brevet.png" alt="Top 5 descriptions IPC brevets">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Semi-conducteurs : 9513 brevets</li>
+                    <li>Préparations médicales : 7198 brevets</li>
+                    <li>Communication visuelle : 3987 brevets</li>
+                    <li>Transmission numérique : 2118 brevets</li>
+                    <li>Radioguidage : 1906 brevets</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div class="block">
+        <h2>Base Emploi</h2>
+        <div class="card">
+            <div class="card-title">Statistiques descriptives pour la variable n_offres</div>
+            <div class="card-image">
+                <img src="images/S1_emp.png" alt="Statistiques descriptives n_offres">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Minimum : 1 offre</li>
+                    <li>Médiane : 1 offre</li>
+                    <li>Maximum : 67 offres</li>
+                    <li>Moyenne : 3.92236 offres</li>
+                    <li>Écart-type : 7.897116 offres</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Statistiques descriptives pour la variable avg_wage</div>
+            <div class="card-image">
+                <img src="images/S2_emp.png" alt="Statistiques descriptives avg_wage">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Minimum : 270€</li>
+                    <li>Médiane : 37000€</li>
+                    <li>Maximum : 65333.33€</li>
+                    <li>Moyenne : 28875.9€</li>
+                    <li>Écart-type : 20474.84€</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="card-title">Top 5 des salaires moyens selon les secteurs</div>
+            <div class="card-image">
+                <img src="images/S3_emp.png" alt="Top 5 salaires secteurs">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>nodya group : 65333.33€</li>
+                    <li>sept lieues : 650000€</li>
+                    <li>adapt rh : 60000€</li>
+                    <li>pmu : 60000€</li>
+                    <li>team.is : 60000€</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block">
+        <h2>Base Finale</h2>
+        <div class="card">
+            <div class="card-title">Statistiques descriptives pour la variable n_patents</div>
+            <div class="card-image">
+                <img src="images/S1_final.png" alt="Statistiques descriptives n_patents">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Minimum : 0.1 brevet</li>
+                    <li>1st quartile : 1 brevet</li>
+                    <li>Médiane : 1 brevet</li>
+                    <li>Moyenne : 7.193 brevets</li>
+                    <li>3rd quartile : 2 brevets</li>
+                    <li>Maximum : 4674.6 brevets</li>
+                </ul>
+            </div>
+        </div>
+        
+        <div class="card">
+            <div class="card-title">Statistiques descriptives pour la variable n_offres</div>
+            <div class="card-image">
+                <img src="images/S2_final.png" alt="Statistiques descriptives n_offres">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Minimum : 1 offre</li>
+                    <li>1st quartile : 1 offre</li>
+                    <li>Médiane : 1 offre</li>
+                    <li>Moyenne : 75.17 offres</li>
+                    <li>3rd quartile : 9 offres</li>
+                    <li>Maximum : 4489 offres</li>
+                </ul>
+            </div>
+        </div>
+        
+
+        <div class="card">
+            <div class="card-title">Statistiques descriptives pour la variable avg_wage</div>
+            <div class="card-image">
+                <img src="images/S3_final.png" alt="Statistiques descriptives avg_wage">
+            </div>
+            <div class="card-content">
+                <ul>
+                    <li>Minimum : 6000€</li>
+                    <li>1st quartile : 36200€</li>
+                    <li>Médiane : 41667€</li>
+                    <li>Moyenne : 58354€</li>
+                    <li>3rd quartile : 50000€</li>
+                    <li>Maximum : 219000€</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <a href="./index.html">Revenir à la page d'accueil</a>
 </body>
 </html>
-
-<img src="images/IMG1.JPG" alt="test">
-
